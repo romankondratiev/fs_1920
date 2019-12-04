@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions', #https://django-extensions.readthedocs.io/en/latest/graph_models.html
     'storages',
     'players',
 ]
