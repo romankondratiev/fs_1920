@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .utils import read_table
+from .utils import read_table, turn_to_int
 from fs.settings import BASE_DIR
 import os
 from django.shortcuts import render
@@ -14,13 +14,13 @@ from django.views.generic.edit import FormView
 from django.db.models import Avg
 
 
-# SearchView https://fs.herokuapp.com/search
+# SearchView https://fs-1920.herokuapp.com/search
 class SearchView(ListView):
 	template_name = "players/search.html"
 	paginate_by = 10
 	
 	# To populate empty database with data from .csv file
-	#table = read_table(os.path.join(BASE_DIR, 'data.csv')) 
+	#table = read_table(os.path.join(BASE_DIR, 'data.csv'), turn_to_int) 
 
 	def get_queryset(self, *args, **kwargs):
 		query=self.request.GET.get('q', None)
@@ -31,7 +31,7 @@ class SearchView(ListView):
 		return queryset
 
 
-# HomeView https://fs.herokuapp.com/
+# HomeView https://fs-1920.herokuapp.com/
 class HomeView(FormView): 
 	template_name = "players/home.html"
 	form_class = TeamForm
@@ -42,7 +42,7 @@ class HomeView(FormView):
 		return super(HomeView, self).form_valid(form)
 
 
-# TeamView https://fs.herokuapp.com/team
+# TeamView https://fs-1920.herokuapp.com/team
 class TeamView(ListView): 
 	template_name = "players/team.html"
 

@@ -75,6 +75,7 @@ class PlayerQuerySet(models.query.QuerySet): # Custom Queryset includes 2 method
 		#  6. return this final queryset only if 11 players could be found with the budget
 		if len(final_q) < 11:
 			return None
+			
 		return final_q
 
 

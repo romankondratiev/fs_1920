@@ -25,7 +25,7 @@ def turn_to_int(value): #Used to turn Market Value field to a integer
 
 
 
-def read_table(sometable): # To populate database with data from .csv file
+def read_table(sometable, function): # To populate database with data from .csv file
 	df = pd.read_csv(sometable, sep=',', usecols = ['Name', 'Age', 'Photo', 'Nationality', 'Overall','Club', 'Value','Position'])
 	for index, row in df.iterrows():
 		Player.objects.get_or_create(
@@ -37,6 +37,6 @@ def read_table(sometable): # To populate database with data from .csv file
 			club=row['Club'],
 			value=row['Value'],
 			position=row['Position'],
-			value_int=turn_to_int(row['Value']),
+			value_int=function(row['Value']),
 			)
 	return df
