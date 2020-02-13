@@ -2,8 +2,37 @@
 
 # Online Search Engine with Soccer Players (+ team-builder)
 
+
+Sonarcloud:
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=alert_status)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=romankondratiev_fs_1920)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=bugs)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=code_smells)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=ncloc)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=alert_status)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=security_rating)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=sqale_index)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
 The database was exported from the FIFA 2019 players database:
 https://www.kaggle.com/karangadiya/fifa19
+
 
 The webapp has 2 main features: 
 1. Search engine 
@@ -40,3 +69,105 @@ To create UML diagrams I used a PlantUML plugin in PyCharm.
 <p align="center">
   <img src="/uml-class-diagram-2.png">
 </p>
+
+
+## 2. Metrics
+
+Besides the badges at the beginning of the page,
+you can find additional information about used metrics
+on the following pages:
+* [sonarcloud.io](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920) 
+
+
+## 3. Clean Code Development
+
+## 4. Build Management with PyGradle and Gradle
+
+## 5. Unit-Tests
+
+## 6. Continuous Integration
+
+## 7. IDE 
+
+I have used Sublime Text as my IDE.
+
+I used such packages as:
+* Alignment 
+* Django Starter 
+* Emmet 
+* SublimeGit
+* SublimeLinter
+
+My favorite shortcuts in the Sublime are:
+* Open terminal (**⌘⇧T**) 
+* Allign code (**⌘⇧A**) 
+* Find All (**⌘⇧F**)
+* Show errors & dirty code with Lintner (**⌘⇧AB**)
+
+
+## 8. DSL
+
+## 9. Functional Programming
+
+* Final data structures
+* Side effect free functions
+
+    Example:
+    ```python
+	def get_queryset(self, *args, **kwargs):
+		query=self.request.GET.get('q', None)
+		if query is not None:
+			queryset = Player.objects.search(query)
+			return queryset
+		return Player.objects.all()
+    ```
+
+ * The use of higher order functions
+
+	Example:
+     ```python
+    	def form_valid(self, form):
+			self.request.session['budget'] = form.cleaned_data.get('budget') #saving user input in current session
+			return self.validate(form)
+     ```
+
+* Functions as parameters and return values/anonymous functions
+
+    Simple example using anonymous function
+    ```python
+		# Program to double each item in a list using map()
+		my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+		new_list = list(map(lambda x: x * 2 , my_list))
+		# Output: [2, 10, 8, 12, 16, 22, 6, 24]
+		print(new_list)
+    ```
+
+    Simple example using functions as parameters:
+    ```python
+	def myfunc(anotherfunc, extraArgs):
+	    anotherfunc(*extraArgs)
+    ```
+
+
+* Use Closures
+    
+    Simple example using closures with Python
+    ```python
+	def print_msg(msg):
+		# This is the outer enclosing function
+
+		    def printer():
+		# This is the nested function
+		        print(msg)
+
+		    printer()
+
+	# We execute the function
+	# Output: Hello
+	print_msg("Hello")
+
+    ```
+
+
+
+
