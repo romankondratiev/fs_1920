@@ -22,3 +22,21 @@ The webapp has 2 main features:
 	-There is some logic behing the team building: 
 		-As you know, you can’t have a team with only attackers; you’ll see there is a position attribute in the DB.
 		- Every 11 player team will need 1 goalkeeper, 2 fullback, 3 halfback and 5 forward playing
+
+
+## 1. UML
+To create UML diagrams I used a PlantUML plugin in PyCharm.
+### 1.1. Class Diagram
+<p align="center">
+  <img src="/uml-class-diagram-2.png">
+</p>
+
+### 1.2. Use Case diagram
+<p align="center">
+  <img src="/uml-class-diagram-2.png">
+</p>
+
+### 1.3. Activity diagram
+<p align="center">
+  <img src="/uml-class-diagram-2.png">
+</p>
