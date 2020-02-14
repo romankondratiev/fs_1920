@@ -38,7 +38,7 @@ The webapp has 2 main features:
 
 
 ## 1. UML
-To create UML diagrams I used a UML plagin in Sublime Text Editor.
+To create UML diagrams I used 'creately' tool
 ### 1.1. Class Diagram
 <p align="center">
   <img src="/uml-class-diagram-2.png">
@@ -51,7 +51,7 @@ To create UML diagrams I used a UML plagin in Sublime Text Editor.
 
 ### 1.3. Activity diagram
 <p align="center">
-  <img src="/uml-class-diagram-2.png">
+  <img src="/uml-activity.jpg">
 </p>
 
 
