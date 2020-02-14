@@ -46,7 +46,7 @@ To create UML diagrams I used a UML plagin in Sublime Text Editor.
 
 ### 1.2. Use Case diagram
 <p align="center">
-  <img src="/uml-class-diagram-2.png">
+  <img src="/uml-use-cases.jpg">
 </p>
 
 ### 1.3. Activity diagram
