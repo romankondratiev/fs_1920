@@ -1,7 +1,6 @@
-# https://fs-1920.herokuapp.com/
-
 # Online Search Engine with Soccer Players (+ team-builder)
 
+# https://fs-1920.herokuapp.com/
 
 Sonarcloud:
 
@@ -15,7 +14,9 @@ CodeClimate::
 [![Maintainability](https://api.codeclimate.com/v1/badges/d03ed1bc12b0e6789bae/maintainability)](https://codeclimate.com/github/romankondratiev/fs_1920/maintainability)
 
 
-The database was exported from the FIFA 2019 players database:
+## This webapp allows to search for soccer players and build perfect team with specific budgets. 
+
+The database for this project was exported from the FIFA 2019 players database:
 https://www.kaggle.com/karangadiya/fifa19
 
 
@@ -108,9 +109,6 @@ class PlayerTestCase(TestCase): #Test Case for object creation
         self.assertEqual(first, 'test')
         self.assertEqual(second, 'test_second')
   ```
-
-
-
 
 
 ## 6. Continuous Integration
