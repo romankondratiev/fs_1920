@@ -7,17 +7,12 @@ Sonarcloud:
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=romankondratiev_fs_1920)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
 
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=ncloc)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=ncloc)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=alert_status)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=security_rating)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920) [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=sqale_index)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
 
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=alert_status)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+CodeClimate::
 
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=security_rating)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
-
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=sqale_index)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
-
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d03ed1bc12b0e6789bae/maintainability)](https://codeclimate.com/github/romankondratiev/fs_1920/maintainability)
 
 
 The database was exported from the FIFA 2019 players database:
@@ -67,6 +62,9 @@ Besides the badges at the beginning of the page,
 you can find additional information about used metrics
 on the following pages:
 * [sonarcloud.io](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920) 
+* 
+
+
 
 
 ## 3. Clean Code Development
