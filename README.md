@@ -79,10 +79,10 @@ The player model was covered by the unit tests
 [tests.py](players/tests.py):
 
 ```python
-	from django.test import TestCase
-	from .models import Player
+from django.test import TestCase
+from .models import Player
 
-	class PlayerTestCase(TestCase): #Test Case for object creation
+class PlayerTestCase(TestCase): #Test Case for object creation
 
     def setUp(self):
 		Player.objects.create(
