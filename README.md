@@ -5,17 +5,7 @@
 
 Sonarcloud:
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=alert_status)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
-
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
-
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=romankondratiev_fs_1920)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
-
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=bugs)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
-
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=code_smells)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
-
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
 
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=ncloc)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
 
@@ -23,13 +13,13 @@ Sonarcloud:
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=alert_status)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
 
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
-
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=security_rating)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
 
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=sqale_index)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
 
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=romankondratiev_fs_1920&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920)
+
+
 The database was exported from the FIFA 2019 players database:
 https://www.kaggle.com/karangadiya/fifa19
 
@@ -54,7 +44,7 @@ The webapp has 2 main features:
 
 
 ## 1. UML
-To create UML diagrams I used a PlantUML plugin in PyCharm.
+To create UML diagrams I used a UML plagin in Sublime Text Editor.
 ### 1.1. Class Diagram
 <p align="center">
   <img src="/uml-class-diagram-2.png">
@@ -85,6 +75,49 @@ on the following pages:
 
 ## 5. Unit-Tests
 
+The player model was covered by the unit tests
+[tests.py](players/tests.py):
+
+    ```python
+from django.test import TestCase
+from .models import Player
+
+class PlayerTestCase(TestCase): #Test Case for object creation
+
+    def setUp(self):
+        Player.objects.create(
+        name="test", 
+        age=100,
+        photo="test", 
+        nationality="test", 
+        overall=100, 
+        club="test", 
+        value="test", 
+        position="test", 
+        value_int=100 )
+
+        Player.objects.create(
+		name="test_second",
+		age=200,
+		photo="test_second",
+		nationality="test_second", 
+		overall=200,
+		club="test_second", 
+		value="test_second",
+		position="test_second", 
+		value_int=200 )
+
+    def test_players(self):
+        first = Player.objects.get(age=100)
+        second = Player.objects.get(age=200)
+        self.assertEqual(first, 'test')
+        self.assertEqual(second, 'test_second')
+    ```
+
+
+
+
+
 ## 6. Continuous Integration
 
 ## 7. IDE 
@@ -110,6 +143,9 @@ My favorite shortcuts in the Sublime are:
 ## 9. Functional Programming
 
 * Final data structures
+
+Within the whole codebase I used such data structures as lists, dictionaries, tuples
+
 * Side effect free functions
 
     Example:
