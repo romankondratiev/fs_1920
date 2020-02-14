@@ -62,10 +62,7 @@ Besides the badges at the beginning of the page,
 you can find additional information about used metrics
 on the following pages:
 * [sonarcloud.io](https://sonarcloud.io/dashboard?id=romankondratiev_fs_1920) 
-* 
-
-
-
+* [codeclimate.com](https://codeclimate.com/github/romankondratiev/fs_1920) 
 
 ## 3. Clean Code Development
 
