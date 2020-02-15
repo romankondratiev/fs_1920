@@ -126,17 +126,17 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 
 4. [Class Names](https://pep8.org/#class-names):
     Class names with the CapWords convention.
-    ```python
+```python
     class TeamView(ListView): 
         ...
 	class HomeView(FormView):
         ...
 	class SearchView(ListView):
         ...
-    ```
+```
 
 5. Source code structure: declare variables close to their usage, similar function should be close
-    ```python
+```python
 	class HomeView(FormView): 
 		template_name = "players/home.html"
 		form_class = TeamForm
@@ -145,10 +145,11 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 		def form_valid(self, form):
 			self.request.session['budget'] = form.cleaned_data.get('budget') #saving user input in current session
 			return super(HomeView, self).form_valid(form)
-    ```
+```
+
 6. [Maximum Line Length](https://pep8.org/#maximum-line-length):
     Maximum length of a single line should be around 80 chars.
-    ```python
+```python
     def setUp(self):
         Player.objects.create(
         name="test", 
@@ -177,7 +178,7 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
         second = Player.objects.get(age=200)
         self.assertEqual(first, 'test')
         self.assertEqual(second, 'test_second')
-    ```
+```
 
 ## 4. Build Management with PyGradle and Gradle
 
