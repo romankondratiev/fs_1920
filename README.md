@@ -51,7 +51,7 @@ To create UML diagrams I used 'creately' tool
 
 ### 1.3. Activity diagram
 <p align="center">
-  <img src="/uml-activity.jpg">
+  <img src="/uml-activity.jpg" style='width: 75%'>
 </p>
 
 
