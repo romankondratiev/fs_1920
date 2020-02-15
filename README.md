@@ -36,6 +36,7 @@ The webapp has 2 main features:
 		-As you know, you can’t have a team with only attackers; you’ll see there is a position attribute in the DB.
 		- Every 11 player team will need 1 goalkeeper, 2 fullback, 3 halfback and 5 forward playing
 
+It was built with Python web-framework Django for backend, JavaScript/HTML/CSS for frontend, PostgreSQL as a database and deployed on Heroku. 
 
 ## 1. UML
 To create UML diagrams I used 'creately' tool
@@ -64,6 +65,118 @@ on the following pages:
 * [codeclimate.com](https://codeclimate.com/github/romankondratiev/fs_1920) 
 
 ## 3. Clean Code Development
+
+I Implemented most of the **Clean Code Development** principles and PEP Conventions with the help of Sublime Text Plugin 'Lintner'.
+
+1. Function rules: Small, Do one thing, Prefer fewer arguments, Use descriptive names, No side effects:
+    ```python
+	def form_valid(self, form):
+		self.request.session['budget'] = form.cleaned_data.get('budget') #saving user input in current session
+		return super(HomeView, self).form_valid(form)
+   
+	def read_table(sometable, function): # To populate database with data from .csv file
+		df = pd.read_csv(sometable, sep=',', usecols = ['Name', 'Age', 'Photo', 'Nationality', 'Overall','Club', 'Value','Position'])
+		for index, row in df.iterrows():
+			Player.objects.get_or_create(
+				name=row['Name'], 
+				age=row['Age'],
+				photo=row['Photo'],
+				nationality=row['Nationality'],
+				overall=row['Overall'],
+				club=row['Club'],
+				value=row['Value'],
+				position=row['Position'],
+				value_int=function(row['Value']),
+				)
+		return df
+  ```
+
+2. Understandability tips:
+    Be consistent, use explanotary variables
+    ```python
+	def get_queryset(self, *args, **kwargs):
+		query=self.request.GET.get('q', None)
+		if query is not None:
+			queryset = Player.objects.search(query)
+			return Player.objects.search(query)
+		queryset = Player.objects.all()
+		return queryset
+
+	def get_queryset(self, *args, **kwargs):
+		user_input=self.request.session['budget']
+		if user_input is not None:
+			queryset = Player.objects.build_team(user_input)
+			return queryset
+		queryset = None
+		return queryset
+    ```
+
+3. [Method Names and Instance Variables](https://pep8.org/#method-names-and-instance-variables):
+    Proper function naming rules: lowercase with words separated by underscores to improve readability.
+    ```python
+	def get_context_data(self, *args, **kwargs): 
+		context = super(TeamView, self).get_context_data(*args, **kwargs)  
+		context['budget'] = self.request.session['budget']
+		qs = self.get_queryset()
+		if qs is not None:
+			context['avg'] = qs.aggregate(Avg('overall'))
+		return context
+    ```
+
+3. [Class Names](https://pep8.org/#class-names):
+    Class names with the CapWords convention.
+    ```python
+    class TeamView(ListView): 
+        ...
+	class HomeView(FormView):
+        ...
+	class SearchView(ListView):
+        ...
+    ```
+
+4. Source code structure: declare variables close to their usage, similar function should be close
+    ```python
+	class HomeView(FormView): 
+		template_name = "players/home.html"
+		form_class = TeamForm
+		success_url = '/team'
+
+		def form_valid(self, form):
+			self.request.session['budget'] = form.cleaned_data.get('budget') #saving user input in current session
+			return super(HomeView, self).form_valid(form)
+    ```
+5. [Maximum Line Length](https://pep8.org/#maximum-line-length):
+    Maximum length of a single line should be around 80 chars.
+    ```python
+    def setUp(self):
+        Player.objects.create(
+        name="test", 
+        age=100,
+        photo="test", 
+        nationality="test", 
+        overall=100, 
+        club="test", 
+        value="test", 
+        position="test", 
+        value_int=100 )
+
+        Player.objects.create(
+		name="test_second",
+		age=200,
+		photo="test_second",
+		nationality="test_second", 
+		overall=200,
+		club="test_second", 
+		value="test_second",
+		position="test_second", 
+		value_int=200 )
+
+    def test_players(self):
+        first = Player.objects.get(age=100)
+        second = Player.objects.get(age=200)
+        self.assertEqual(first, 'test')
+        self.assertEqual(second, 'test_second')
+    ```
 
 ## 4. Build Management with PyGradle and Gradle
 
@@ -107,6 +220,8 @@ class PlayerTestCase(TestCase): #Test Case for object creation
         self.assertEqual(first, 'test')
         self.assertEqual(second, 'test_second')
   ```
+
+[10 point Clean Code Development Cheatsheet](https://user-images.githubusercontent.com/35653122/51113192-86f8d880-1801-11e9-90ad-88dd58854a18.png)
 
 
 ## 6. Continuous Integration
