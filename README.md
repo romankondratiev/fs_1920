@@ -237,6 +237,11 @@ class PlayerTestCase(TestCase): #Test Case for object creation
 I used [Circle CI](https://circleci.com/build-insights/gh/romankondratiev) for continuous integration and and [Heroku](https://www.heroku.com/continuous-delivery) for delivery
 
 
+<p align="center">
+  <img src="/heroku_cd.png">
+</p>
+
+
 ## 7. IDE 
 
 I have used Sublime Text as my IDE.
