@@ -180,7 +180,16 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
         self.assertEqual(second, 'test_second')
 ```
 
-## 4. Build Management with PyGradle and Gradle
+## 4. Build Management
+
+I used [Heroku's automated build system](https://www.heroku.com/dynos/build) for the build process of my webapp:
+
+To deploy an app, Heroku needs only three things from the developer: source code, a list of dependencies, and a [Procfile](/Procfile) (a text file that indicates which command should be used to start the code running). The build system takes the application, its dependencies, and the language runtime and produces a “slug.” A slug contains everything needed to run the app, except for the operating system.
+
+<p align="center">
+  <img src="/heroku-build.png">
+</p>
+
 
 ## 5. Unit-Tests
 
@@ -225,7 +234,7 @@ class PlayerTestCase(TestCase): #Test Case for object creation
 
 ## 6. Continuous Integration
 
-I used [Circle CI](https://circleci.com/build-insights/gh/romankondratiev) for continuous integration and and [Heroku](https://www.heroku.com/continuous-delivery): for delivery
+I used [Circle CI](https://circleci.com/build-insights/gh/romankondratiev) for continuous integration and and [Heroku](https://www.heroku.com/continuous-delivery) for delivery
 
 
 ## 7. IDE 
