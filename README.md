@@ -93,7 +93,7 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 
 2. Understandability tips:
     Be consistent, use explanotary variables
-    ```python
+```python
 	def get_queryset(self, *args, **kwargs):
 		query=self.request.GET.get('q', None)
 		if query is not None:
@@ -101,7 +101,6 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 			return Player.objects.search(query)
 		queryset = Player.objects.all()
 		return queryset
-
 	def get_queryset(self, *args, **kwargs):
 		user_input=self.request.session['budget']
 		if user_input is not None:
@@ -109,11 +108,11 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 			return queryset
 		queryset = None
 		return queryset
-    ```
+```
 
 3. [Method Names and Instance Variables](https://pep8.org/#method-names-and-instance-variables):
     Proper function naming rules: lowercase with words separated by underscores to improve readability.
-    ```python
+```python
 	def get_context_data(self, *args, **kwargs): 
 		context = super(TeamView, self).get_context_data(*args, **kwargs)  
 		context['budget'] = self.request.session['budget']
@@ -121,7 +120,7 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 		if qs is not None:
 			context['avg'] = qs.aggregate(Avg('overall'))
 		return context
-    ```
+```
 
 3. [Class Names](https://pep8.org/#class-names):
     Class names with the CapWords convention.
