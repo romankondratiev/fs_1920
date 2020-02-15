@@ -272,6 +272,12 @@ My favorite shortcuts in the Sublime are:
 
 ## 8. DSL
 
+Since my project is an interactive webapp and the user interacts with my webapp through the input field, inserting queries with different parameters, there is no need for an explicit DSL-commands other than the input field for search queries. 
+
+<p align="center">
+  <img src="/dsl.png">
+</p>
+
 ## 9. Functional Programming
 
 * Final data structures
