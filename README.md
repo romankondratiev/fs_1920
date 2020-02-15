@@ -187,7 +187,7 @@ I used [Heroku's automated build system](https://www.heroku.com/dynos/build) for
 To deploy an app, Heroku needs only three things from the developer: source code, a list of dependencies, and a [Procfile](/Procfile) (a text file that indicates which command should be used to start the code running). The build system takes the application, its dependencies, and the language runtime and produces a “slug.” A slug contains everything needed to run the app, except for the operating system.
 
 <p align="center">
-  <img src="/heroku-build.png">
+  <img src="/heroku_build.png">
 </p>
 
 
@@ -238,7 +238,7 @@ I used [Circle CI](https://circleci.com/build-insights/gh/romankondratiev) for c
 
 
 <p align="center">
-  <img src="/heroku_cd.png">
+  <img src="/heroku-cd.png">
 </p>
 
 
