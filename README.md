@@ -124,7 +124,7 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 		return context
 ```
 
-3. [Class Names](https://pep8.org/#class-names):
+4. [Class Names](https://pep8.org/#class-names):
     Class names with the CapWords convention.
     ```python
     class TeamView(ListView): 
@@ -135,7 +135,7 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
         ...
     ```
 
-4. Source code structure: declare variables close to their usage, similar function should be close
+5. Source code structure: declare variables close to their usage, similar function should be close
     ```python
 	class HomeView(FormView): 
 		template_name = "players/home.html"
@@ -146,7 +146,7 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 			self.request.session['budget'] = form.cleaned_data.get('budget') #saving user input in current session
 			return super(HomeView, self).form_valid(form)
     ```
-5. [Maximum Line Length](https://pep8.org/#maximum-line-length):
+6. [Maximum Line Length](https://pep8.org/#maximum-line-length):
     Maximum length of a single line should be around 80 chars.
     ```python
     def setUp(self):
