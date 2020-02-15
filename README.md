@@ -2,6 +2,19 @@
 
 # https://fs-1920.herokuapp.com/
 
+
+## Checklist 
+
+1. [UML](https://github.com/romankondratiev/fs_1920/#1-uml)
+2. [Metrics](https://github.com/romankondratiev/fs_1920/#2-metrics)
+3. [Clean Code Development](https://github.com/romankondratiev/fs_1920/#3-clean-code-development)
+4. [Build Management](https://github.com/romankondratiev/fs_1920/#4-build-management)
+5. [Unit tests](https://github.com/romankondratiev/fs_1920/#5-unit-tests)
+6. [Continous Integration and delivery](https://github.com/romankondratiev/fs_1920/#6-continuous-integration)
+7. [IDE](https://github.com/romankondratiev/fs_1920/#7-ide)
+8. [DSL](https://github.com/romankondratiev/fs_1920/#8-dsl)
+9. [Functional Programming](https://github.com/romankondratiev/fs_1920/#9-functional-programming)
+
 ### Screenshots
 <p align="center">
   <img src="/homepage.png">
