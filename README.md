@@ -68,6 +68,9 @@ on the following pages:
 
 I Implemented most of the **Clean Code Development** principles and PEP Conventions with the help of Sublime Text Plugin 'Linter'.
 
+
+[10 point Clean Code Development Cheatsheet](https://user-images.githubusercontent.com/35653122/51113192-86f8d880-1801-11e9-90ad-88dd58854a18.png)
+
 1. Function rules: Small, Do one thing, Prefer fewer arguments, Use descriptive names, No side effects:
 ```python
 	def form_valid(self, form):
@@ -218,9 +221,6 @@ class PlayerTestCase(TestCase): #Test Case for object creation
         self.assertEqual(first, 'test')
         self.assertEqual(second, 'test_second')
   ```
-
-[10 point Clean Code Development Cheatsheet](https://user-images.githubusercontent.com/35653122/51113192-86f8d880-1801-11e9-90ad-88dd58854a18.png)
-
 
 ## 6. Continuous Integration
 
