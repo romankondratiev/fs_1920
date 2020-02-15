@@ -69,11 +69,10 @@ on the following pages:
 I Implemented most of the **Clean Code Development** principles and PEP Conventions with the help of Sublime Text Plugin 'Linter'.
 
 1. Function rules: Small, Do one thing, Prefer fewer arguments, Use descriptive names, No side effects:
-    ```python
+```python
 	def form_valid(self, form):
 		self.request.session['budget'] = form.cleaned_data.get('budget') #saving user input in current session
 		return super(HomeView, self).form_valid(form)
-   
 	def read_table(sometable, function): # To populate database with data from .csv file
 		df = pd.read_csv(sometable, sep=',', usecols = ['Name', 'Age', 'Photo', 'Nationality', 'Overall','Club', 'Value','Position'])
 		for index, row in df.iterrows():
@@ -89,7 +88,26 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 				value_int=function(row['Value']),
 				)
 		return df
-  ```
+```
+
+2. Understandability tips:
+    Be consistent, use explanotary variables
+```python
+	def get_queryset(self, *args, **kwargs):
+		query=self.request.GET.get('q', None)
+		if query is not None:
+			queryset = Player.objects.search(query)
+			return Player.objects.search(query)
+		queryset = Player.objects.all()
+		return queryset
+	def get_queryset(self, *args, **kwargs):
+		user_input=self.request.session['budget']
+		if user_input is not None:
+			queryset = Player.objects.build_team(user_input)
+			return queryset
+		queryset = None
+		return queryset
+```
 
 3. [Method Names and Instance Variables](https://pep8.org/#method-names-and-instance-variables):
     Proper function naming rules: lowercase with words separated by underscores to improve readability.
