@@ -66,7 +66,7 @@ on the following pages:
 
 ## 3. Clean Code Development
 
-I Implemented most of the **Clean Code Development** principles and PEP Conventions with the help of Sublime Text Plugin 'Lintner'.
+I Implemented most of the **Clean Code Development** principles and PEP Conventions with the help of Sublime Text Plugin 'Linter'.
 
 1. Function rules: Small, Do one thing, Prefer fewer arguments, Use descriptive names, No side effects:
     ```python
@@ -241,7 +241,7 @@ My favorite shortcuts in the Sublime are:
 * Open terminal (**⌘⇧T**) 
 * Allign code (**⌘⇧A**) 
 * Find All (**⌘⇧F**)
-* Show errors & dirty code with Lintner (**⌘⇧AB**)
+* Show errors & dirty code with Linter (**⌘⇧AB**)
 
 
 ## 8. DSL
