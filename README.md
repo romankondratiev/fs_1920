@@ -91,25 +91,6 @@ I Implemented most of the **Clean Code Development** principles and PEP Conventi
 		return df
   ```
 
-2. Understandability tips:
-    Be consistent, use explanotary variables
-```python
-	def get_queryset(self, *args, **kwargs):
-		query=self.request.GET.get('q', None)
-		if query is not None:
-			queryset = Player.objects.search(query)
-			return Player.objects.search(query)
-		queryset = Player.objects.all()
-		return queryset
-	def get_queryset(self, *args, **kwargs):
-		user_input=self.request.session['budget']
-		if user_input is not None:
-			queryset = Player.objects.build_team(user_input)
-			return queryset
-		queryset = None
-		return queryset
-```
-
 3. [Method Names and Instance Variables](https://pep8.org/#method-names-and-instance-variables):
     Proper function naming rules: lowercase with words separated by underscores to improve readability.
 ```python
